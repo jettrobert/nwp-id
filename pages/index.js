@@ -106,8 +106,7 @@ const MyBlog = ({ posts }) => {
       </div>
       <div className="scrolling-text-container">
         <div className="scrolling-text">
-          THIS IS A TEST OF THE NEW WORLD PERSON CONTENT SERVICE. THIS IS ONLY A TEST.
-        </div>
+          INI ADALAH UJI COBA DARI LAYANAN KONTEN NEW WORLD PERSON. INI HANYA SEBUAH UJI COBA.        </div>
       </div>
       <div className="container" ref={containerRef}>
         <div className="box-spacer" />
