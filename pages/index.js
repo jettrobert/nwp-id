@@ -106,7 +106,8 @@ const MyBlog = ({ posts }) => {
       </div>
       <div className="scrolling-text-container">
         <div className="scrolling-text">
-          INI ADALAH UJI COBA DARI LAYANAN KONTEN NEW WORLD PERSON. INI HANYA SEBUAH UJI COBA.        </div>
+          SELAMAT DATANG DI SISTEM KONTEN NEW WORLD. MASA DEPAN ADALAH MILIK KITA. IKUTI KAMI DI INSTAGRAM UNTUK TETAP DIPERBARUI.
+        </div>
       </div>
       <div className="container" ref={containerRef}>
         <div className="box-spacer" />
@@ -120,6 +121,21 @@ const MyBlog = ({ posts }) => {
         ))}
         <div className="box-spacer" />
       </div>
+
+      <div id="links-container">
+        <a href="https://www.instagram.com/new_world_person/" target="_blank" rel="noopener noreferrer">
+          INSTAGRAM
+        </a>
+        <span className="divider"> | </span>
+        <a href="https://www.newworldperson.com" target="_blank" rel="noopener noreferrer">
+          BACA DALAM BAHASA LAIN
+        </a>
+        <span className="divider">|</span>
+        <a href="https://www.instagram.com/new_world_person/" target="_blank" rel="noopener noreferrer">
+          HUBUNGI KAMI
+        </a>
+      </div>
+
       <img id="bottom-logo" src="/logo-white.svg" alt="New World Person" />
     </>
   );
@@ -134,7 +150,7 @@ export async function getStaticProps() {
   try {
     posts = await api.posts.browse({
       limit: 15, // Feel free to adjust the limit
-      filter: 'tags:[id]' // Only fetch posts with the 'id' tag
+      filter: 'tags: [syn-id]'
     });
   } catch (error) {
     console.error(error);
