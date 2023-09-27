@@ -111,6 +111,8 @@ export default function Post({ post }) {
         }
     }, []);
 
+    const [isGrayBoxVisible, setGrayBoxVisible] = useState(true);
+
     return (
         <>
             <meta charSet="UTF-8" />
@@ -146,6 +148,12 @@ export default function Post({ post }) {
                     ))}
                     <div className="read-time">{post.reading_time} menit bacaan</div>  {/* The new read-time tag */}
                 </div>
+                {isGrayBoxVisible && (
+                    <div className="dark-gray-box" id="sampleBox">
+                        <span className="close-icon" onClick={() => setGrayBoxVisible(false)}>X</span>
+                        <span className="sample-text">Model kami untuk SYN-ID masih dalam tahap awal dan kami mencari umpan balik dari pembaca mengenai kualitas tulisannya. Kirimkan kami pesan di Instagram @new_world_person dengan segala pengamatan.</span>
+                    </div>
+                )}
                 <div className="markdown-content" dangerouslySetInnerHTML={{ __html: post.html }}></div>
             </div>
             {isPopupVisible && (
